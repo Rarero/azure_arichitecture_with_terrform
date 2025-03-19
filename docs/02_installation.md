@@ -32,7 +32,7 @@ on darwin_amd64
 - Homebrew를 사용하면 손쉽게 버전 관리를 할 수 있음
 - `brew upgrade terraform` 명령어로 최신 버전으로 업그레이드 가능
 
----
+<br>
 
 ### **2) 직접 바이너리 다운로드 (수동 설치)**
 Homebrew를 사용할 수 없는 경우, HashiCorp 공식 웹사이트에서 Terraform을 다운로드하여 설치할 수도 있습니다.
@@ -40,7 +40,6 @@ Homebrew를 사용할 수 없는 경우, HashiCorp 공식 웹사이트에서 Ter
 1. [Terraform 다운로드 페이지](https://developer.hashicorp.com/terraform/downloads)에 접속합니다.
 2. `macOS` 버전에 맞는 `.zip` 파일을 다운로드합니다.
 3. 터미널에서 압축을 해제하고 실행 파일을 `/usr/local/bin`에 복사합니다.
-
 ```sh
 unzip terraform_*.zip
 sudo mv terraform /usr/local/bin/
@@ -48,12 +47,11 @@ chmod +x /usr/local/bin/terraform
 ```
 
 4. Terraform 버전 확인:
-
 ```sh
 terraform version
 ```
 
----
+<br>
 
 ## 3. Terraform 기본 설정
 
@@ -65,7 +63,7 @@ terraform -install-autocomplete
 ```
 이후 터미널을 다시 시작하면 자동 완성이 활성화됩니다.
 
----
+<br>
 
 ### **2) Terraform 환경 변수 설정 (선택사항)**
 Terraform 실행 경로를 환경 변수에 추가해야 하는 경우, 다음 명령을 실행합니다.
@@ -77,7 +75,7 @@ source ~/.zshrc
 
 이제 어느 디렉토리에서든 `terraform` 명령을 실행할 수 있습니다.
 
----
+<br>
 
 ## 4. Terraform 실행 테스트
 설치가 정상적으로 완료되었는지 확인하려면 간단한 Terraform 명령어를 실행해 봅니다.
@@ -88,7 +86,7 @@ terraform init
 
 Terraform이 정상적으로 실행되면, 출력 메시지에서 `Terraform has been successfully initialized!`를 확인할 수 있습니다.
 
----
+<br>
 
 ## 5. Terraform 제거 방법
 만약 Terraform을 제거해야 한다면, 다음 명령을 실행하면 됩니다.
@@ -102,7 +100,7 @@ brew uninstall terraform
 sudo rm /usr/local/bin/terraform
 ```
 
----
+<br>>
 
 ## 6. 참고 사이트
 - [Terraform 공식 문서](https://developer.hashicorp.com/terraform/docs)

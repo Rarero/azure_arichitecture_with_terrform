@@ -3,7 +3,7 @@
 Terraform을 사용하여 인프라를 효율적으로 관리하려면 몇 가지 중요한 베스트 프랙티스를 따라야 합니다.  
 이 문서에서는 Terraform의 유지보수성과 확장성을 높이기 위한 주요 전략을 정리합니다.
 
----
+<br>
 
 ## 1. 코드 구조 및 모듈화
 
@@ -25,7 +25,7 @@ resource "azurerm_virtual_network" "vnet" {
 - 개발(Dev), 스테이징(Staging), 운영(Prod) 환경별로 구성을 나누어 관리합니다.
 - `environments/dev/`, `environments/staging/`, `environments/prod/` 폴더를 만들어 각각 다른 설정을 유지할 수 있도록 합니다.
 
----
+<br>
 
 ## 2. 상태 관리 (Terraform State)
 
@@ -49,7 +49,7 @@ terraform {
 - 여러 사용자가 동시에 Terraform을 실행하면 충돌이 발생할 수 있으므로, **State Locking 기능을 활용하여 충돌을 방지**해야 합니다.
 - 원격 백엔드 사용 시 대부분의 클라우드 저장소(Azure, AWS, GCP)는 잠금 기능을 지원합니다.
 
----
+<br>
 
 ## 3. 변수 및 시크릿 관리
 
@@ -70,7 +70,7 @@ terraform {
 export TF_VAR_client_secret="your-secret-key"
 ```
 
----
+<br>
 
 ## 4. 코드 리뷰 및 CI/CD 적용
 
@@ -103,7 +103,7 @@ jobs:
         run: terraform plan -input=false
 ```
 
----
+<br>
 
 ## 5. 모니터링 및 로깅
 
@@ -114,7 +114,7 @@ jobs:
 ### **5.2. Terraform 변경 로그 남기기**
 - `terraform apply` 실행 전에 변경 사항을 기록하여, 문제가 발생했을 때 빠르게 롤백할 수 있도록 합니다.
 
----
+<br>
 
 ## 6. 베스트 프랙티스 요약
 

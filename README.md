@@ -5,6 +5,8 @@
 Terraform을 활용하면 인프라를 코드(IaC, Infrastructure as Code)로 정의하여 자동화된 배포 및 일관된 운영 관리를 수행할 수 있습니다.  
 이를 통해 인프라 변경 사항을 추적하고, 확장성을 고려한 안정적인 환경을 구축할 수 있습니다.
 
+<br>
+
 ## 2. 목적
 본 문서의 주요 목표는 다음과 같습니다.
 
@@ -20,12 +22,15 @@ Terraform을 활용하면 인프라를 코드(IaC, Infrastructure as Code)로 �
    - Terraform을 활용한 인프라 관리 원칙 및 베스트 프랙티스 학습  
    - Azure 서비스 간의 관계 및 아키텍처 설계 능력 배양  
 
+<br>
+
 ## 3. Repository 구조
 ```plaintext
 azure_architecture_with_terraform/
 ├── docs/                     # 문서 관련 파일
 │   ├── 01_intro.md           # Terraform 개념 및 원리 설명
 │   ├── 02_installation.md    # Terraform 설치 및 기본 설정 (Mac)
+│   ├── 02-1_tfenv_terraform_version.md  # tfenv 설치 및 Terraform 버전 관리
 │   ├── 03_best_practices.md  # Terraform 베스트 프랙티스 정리
 ├── environments/             # 배포 환경별 구성
 │   ├── dev/                  # 개발 환경
@@ -69,66 +74,18 @@ azure_architecture_with_terraform/
 └── versions.tf               # Terraform 버전 및 provider 버전 관리
 ```
 
-## 4. tfenv를 활용한 Terraform 버전 관리
+<br>
 
-### 4.1. tfenv란?
-`tfenv`는 Terraform 버전을 쉽게 관리하고 전환할 수 있는 버전 관리 도구입니다.  
-여러 프로젝트에서 서로 다른 Terraform 버전을 사용해야 할 경우, `tfenv`를 활용하면 간편하게 원하는 버전을 설치하고 전환할 수 있습니다.
+## 4. Terraform 버전 관리
 
-### 4.2. tfenv 설치 방법
-#### **MacOS (Homebrew 사용)**
-```sh
-brew install tfenv
-```
+Terraform 버전 관리는 프로젝트의 배포 방식에 따라 다르게 접근할 수 있습니다.
 
-#### **Linux (Ubuntu/Debian)**
-```sh
-git clone https://github.com/tfutils/tfenv.git ~/.tfenv
-echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-```
+- **단일 배포 형식으로 버전 관리가 필요 없는 경우**: [Terraform 설치 및 기본 설정](docs/02_installation.md) 문서를 참고하세요.
+- **여러 프로젝트에서 다양한 Terraform 버전을 관리해야 하는 경우**: [tfenv로 Terraform 버전 관리](docs/02-1_tfenv_terraform_version.md) 문서를 참고하세요.
 
-### 4.3. Terraform 버전 관리
-#### **Terraform 버전 설치**
-```sh
-tfenv install <버전>
-```
-예시:
-```sh
-tfenv install 1.5.7
-```
+`tfenv`를 사용하면 여러 프로젝트에서 서로 다른 Terraform 버전을 쉽게 설치하고 전환할 수 있습니다.
 
-#### **Terraform 버전 변경**
-```sh
-tfenv use <버전>
-```
-예시:
-```sh
-tfenv use 1.5.7
-```
-
-#### **설치된 Terraform 버전 목록 확인**
-```sh
-tfenv list
-```
-
-#### **기본 Terraform 버전 설정**
-```sh
-tfenv use <버전> --default
-```
-예시:
-```sh
-tfenv use 1.6.0 --default
-```
-
-### 4.4. 프로젝트별 Terraform 버전 지정
-프로젝트 디렉토리에서 `.terraform-version` 파일을 생성하면, 해당 디렉토리에서 자동으로 지정한 버전이 적용됩니다.
-
-```sh
-echo "1.5.7" > .terraform-version
-```
-
-이후 해당 디렉토리에서 `terraform version`을 실행하면 설정된 버전이 적용됨을 확인할 수 있습니다.
+<br>
 
 ## 5. 참고 사이트
 - [tfenv GitHub Repository](https://github.com/tfutils/tfenv)
