@@ -44,15 +44,15 @@ azure_architecture_with_terraform/
 │       ├── terraform.tfvars
 │       ├── outputs.tf
 ├── modules/                  # 재사용 가능한 Terraform 모듈
-│   ├── networking/            # 네트워크 관련 모듈 (VNet, Subnet 등)
+│   ├── networking/           # 네트워크 관련 모듈 (VNet, Subnet 등)
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   ├── outputs.tf
-│   ├── compute/               # 가상 머신, AKS, App Service 관련 모듈
+│   ├── compute/              # 가상 머신, AKS, App Service 관련 모듈
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   ├── outputs.tf
-│   ├── storage/               # 스토리지 관련 모듈 (Blob, File Share 등)
+│   ├── storage/              # 스토리지 관련 모듈 (Blob, File Share 등)
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   ├── outputs.tf
