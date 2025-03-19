@@ -4,7 +4,7 @@
 Terraform은 HashiCorp에서 개발한 **Infrastructure as Code (IaC)** 도구로, 클라우드 인프라를 코드로 정의하고 자동화하는 데 사용됩니다.  
 이 문서에서는 Mac에서 Terraform을 설치하고 기본적인 설정을 수행하는 방법을 설명합니다.
 
----
+<br>
 
 ## 2. Terraform 설치 방법 (Mac)
 
@@ -31,8 +31,6 @@ on darwin_amd64
 ✅ **이 방법을 추천하는 이유:**  
 - Homebrew를 사용하면 손쉽게 버전 관리를 할 수 있음
 - `brew upgrade terraform` 명령어로 최신 버전으로 업그레이드 가능
-
-<br>
 
 ### **2) 직접 바이너리 다운로드 (수동 설치)**
 Homebrew를 사용할 수 없는 경우, HashiCorp 공식 웹사이트에서 Terraform을 다운로드하여 설치할 수도 있습니다.
@@ -62,8 +60,6 @@ Terraform CLI에서 자동 완성을 사용하려면 다음을 실행합니다.
 terraform -install-autocomplete
 ```
 이후 터미널을 다시 시작하면 자동 완성이 활성화됩니다.
-
-<br>
 
 ### **2) Terraform 환경 변수 설정 (선택사항)**
 Terraform 실행 경로를 환경 변수에 추가해야 하는 경우, 다음 명령을 실행합니다.
@@ -100,7 +96,7 @@ brew uninstall terraform
 sudo rm /usr/local/bin/terraform
 ```
 
-<br>>
+<br>
 
 ## 6. 참고 사이트
 - [Terraform 공식 문서](https://developer.hashicorp.com/terraform/docs)
