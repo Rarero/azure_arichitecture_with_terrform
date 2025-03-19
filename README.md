@@ -31,42 +31,47 @@ azure_architecture_with_terraform/
 │   ├── 01_intro.md           # Terraform 개념 및 원리 설명
 │   ├── 02_installation.md    # Terraform 설치 및 기본 설정 (Mac)
 │   ├── 02-1_tfenv_terraform_version.md  # tfenv 설치 및 Terraform 버전 관리
-│   ├── 03_best_practices.md  # Terraform 베스트 프랙티스 정리
+│   └── 03_best_practices.md  # Terraform 베스트 프랙티스 정리
+│
 ├── environments/             # 배포 환경별 구성
 │   ├── dev/                  # 개발 환경
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   ├── terraform.tfvars
-│   │   ├── outputs.tf
+│   │   └── outputs.tf
 │   ├── staging/              # 스테이징 환경
 │   │   ├── main.tf
 │   │   ├── variables.tf
 │   │   ├── terraform.tfvars
-│   │   ├── outputs.tf
-│   ├── prod/                 # 운영 환경
+│   │   └── outputs.tf
+│   └── prod/                 # 운영 환경
 │       ├── main.tf
 │       ├── variables.tf
 │       ├── terraform.tfvars
-│       ├── outputs.tf
+│       └── outputs.tf
+│
 ├── modules/                  # 재사용 가능한 Terraform 모듈
 │   ├── networking/           # 네트워크 관련 모듈 (VNet, Subnet 등)
 │   │   ├── main.tf
 │   │   ├── variables.tf
-│   │   ├── outputs.tf
+│   │   └── outputs.tf
 │   ├── compute/              # 가상 머신, AKS, App Service 관련 모듈
 │   │   ├── main.tf
 │   │   ├── variables.tf
-│   │   ├── outputs.tf
-│   ├── storage/              # 스토리지 관련 모듈 (Blob, File Share 등)
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   ├── outputs.tf
+│   │   └── outputs.tf
+│   └── storage/              # 스토리지 관련 모듈 (Blob, File Share 등)
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+│
 ├── scripts/                  # 스크립트 파일 저장 (필요 시)
 │   ├── bootstrap.sh          # 초기 설정 스크립트
-│   ├── cleanup.sh            # 리소스 정리 스크립트
+│   └── cleanup.sh            # 리소스 정리 스크립트
+│
 ├── .github/                  # GitHub Actions (CI/CD 파이프라인 설정)
-│   ├── workflows/
-│   │   ├── terraform-ci.yml  # Terraform Plan/Apply 자동화
+│   └── workflows/
+│       └── terraform-ci.yml  # Terraform Plan/Apply 자동화
+│
 ├── .gitignore                # Git 제외 파일 설정
 ├── README.md                 # 프로젝트 개요 및 설명
 ├── backend.tf                # Terraform backend (예: Azure Storage)
