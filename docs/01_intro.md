@@ -4,7 +4,7 @@
 Terraform은 HashiCorp에서 개발한 **Infrastructure as Code (IaC)** 도구로, 선언형 구문을 사용하여 인프라를 정의하고 관리할 수 있습니다.  
 이를 통해 클라우드 및 온프레미스 환경에서 **반복 가능하고 일관된 인프라 배포**가 가능합니다.
 
-Terraform은 **클라우드 제공업체(AWS, Azure, GCP 등)**뿐만 아니라 **온프레미스 인프라(VMware, OpenStack 등)**도 코드로 정의하여 관리할 수 있도록 지원합니다.
+Terraform은 **클라우드 제공업체(AWS, Azure, GCP 등)** 뿐만 아니라 **온프레미스 인프라(VMware, OpenStack 등)** 도 코드로 정의하여 관리할 수 있도록 지원합니다.
 
 <br>
 
