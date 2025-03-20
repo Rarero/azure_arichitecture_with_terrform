@@ -75,8 +75,7 @@ azure_architecture_with_terraform/
 ├── .gitignore                # Git 제외 파일 설정
 ├── README.md                 # 프로젝트 개요 및 설명
 ├── backend.tf                # Terraform backend (예: Azure Storage)
-├── providers.tf              # Terraform provider 설정 (Azure)
-└── versions.tf               # Terraform 버전 및 provider 버전 관리
+└── providers.tf              # Terraform provider 설정 (Azure)
 ```
 
 <br>

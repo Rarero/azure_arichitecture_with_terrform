@@ -87,7 +87,7 @@ tfenv list
 ### **기본 Terraform 버전 설정**
 
 ```
-tfenv use <버전> --default
+tfenv use <버전>
 ```
 
 <br>
