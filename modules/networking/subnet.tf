@@ -1,6 +1,6 @@
 # Subnet 모듈 (https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet#delegation-3)
 resource "azurerm_subnet" "subnets" {
-  for_each             = { for subnet in var.subnets : subnet.name => subnet }
+  for_each = var.subnets
 
   # 필수
   name                 = each.value.name
